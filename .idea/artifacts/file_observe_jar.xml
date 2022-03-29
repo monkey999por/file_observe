@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="file_observe:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/file_observe_jar</output-path>
+    <root id="archive" name="file_observe.jar">
+      <element id="module-output" name="file_observe" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/cmd.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/props.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
