@@ -1,15 +1,18 @@
-package main;
 
-import main.Cmd;
-import main.Setting;
+import monkey999.tools.Cmd;
+import monkey999.tools.Setting;
+
 import java.io.IOException;
 import java.nio.file.*;
 
-import static java.nio.file.StandardWatchEventKinds.*;
-import static java.nio.file.WatchEvent.*;
-
 public class Main {
 
+
+    /**
+     * @param args 0: properties
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws IOException, InterruptedException {
         Setting.init(args[0]);
         new RecursiveWatcher(Paths.get(Setting.getAsString("watch_root")), new RecursiveWatcher.Callback(){
@@ -22,7 +25,7 @@ public class Main {
                 }
             }
         }).start();
-
+        System.out.println("監視を開始しました。");
         Thread.sleep(3600);
 
     }
