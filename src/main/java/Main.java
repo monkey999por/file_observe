@@ -1,7 +1,7 @@
-package main.java;
 
-import main.Cmd;
-import main.Setting;
+import monkey999.tools.Cmd;
+import monkey999.tools.Setting;
+
 import java.io.IOException;
 import java.nio.file.*;
 
@@ -25,7 +25,7 @@ public class Main {
                 }
             }
         }).start();
-
+        System.out.println("監視を開始しました。");
         Thread.sleep(3600);
 
     }
